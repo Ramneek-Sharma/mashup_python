@@ -15,9 +15,9 @@ The project involves several key steps:
 ## Interface
 <img width="376" alt="Screenshot 2024-10-14 at 6 24 12 AM" src="https://github.com/user-attachments/assets/d1cea1a7-f3f3-44ba-b781-7fcff1dbf596">
 
-
+## Result
 <img width="378" alt="Screenshot 2024-10-14 at 6 24 27 AM" src="https://github.com/user-attachments/assets/c1297122-8140-4159-9529-cdf1be71c315">
-
+<img width="621" alt="Screenshot 2024-10-14 at 6 27 00 AM" src="https://github.com/user-attachments/assets/83025fd0-0d97-40ab-bef7-f683054b488a">
 
 ## Features
 * Search YouTube for specific artists or tracks.
