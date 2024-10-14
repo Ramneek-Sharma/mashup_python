@@ -12,6 +12,11 @@ The project involves several key steps:
 * Packaging- Compresses the resulting mashup into a ZIP file.
 * Email Delivery-Sends the ZIP file to the user via email.
 
+## Interface
+<img width="376" alt="Screenshot 2024-10-14 at 6 24 12 AM" src="https://github.com/user-attachments/assets/d1cea1a7-f3f3-44ba-b781-7fcff1dbf596">
+
+
+<img width="378" alt="Screenshot 2024-10-14 at 6 24 27 AM" src="https://github.com/user-attachments/assets/c1297122-8140-4159-9529-cdf1be71c315">
 
 
 ## Features
