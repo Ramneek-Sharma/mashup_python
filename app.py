@@ -124,8 +124,8 @@ def send_email(recipient_email, zip_file_path, singer_name):
         print(f"Error: ZIP file not found at {zip_file_path}")
         return
 
-    sender_email = os.environ.get('SENDER_EMAIL')
-    password = os.environ.get('EMAIL_PASSWORD')
+    sender_email = "mail@gmail.com"  
+    password = ""  #app password that can be found in manage account 
 
     msg = MIMEMultipart()
     msg['From'] = sender_email
@@ -179,24 +179,18 @@ def index():
 
 @app.route('/generate_mashup', methods=['POST'])
 def generate_mashup():
-    data = request.json
-    singer_name = data['singerName']
-    num_videos = int(data['numVideos'])
-    trim_duration = int(data['trimDuration'])
-    recipient_email = data['email']
-
-  
-    num_videos = max(1, min(num_videos, 10))
-    trim_duration = max(10, min(trim_duration, 30))
-
+    singer_name = request.form['singerName']
+    num_videos = int(request.form['numVideos'])
+    trim_duration = int(request.form['trimDuration'])
+    recipient_email = request.form['email']
+    num_videos = max(1, min(num_videos, 10))  
+    trim_duration = max(10, min(trim_duration, 30))  
     output_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'output', singer_name.replace(' ', '_'))
     os.makedirs(output_folder, exist_ok=True)
-
-   
     thread = threading.Thread(target=process_mashup, args=(singer_name, num_videos, trim_duration, recipient_email, output_folder))
     thread.start()
 
-    return jsonify({"message": f"Mashup generation started for {singer_name}. The file will be sent to {recipient_email} when ready."})
+    return jsonify({"message": f"Mashup generation started. The file will be sent to {recipient_email} when ready."})
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
+    app.run(debug=True)
