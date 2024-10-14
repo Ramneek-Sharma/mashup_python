@@ -3,9 +3,9 @@
 The Audio Mashup Creator is a Python based project designed to automate the process of creating customized audio mashups from YouTube videos. 
 
 ## Technologies Used
-*Frontend: HTML, CSS (Tailwind CSS), JavaScript
-*Backend: Python, Flask
-*Additional Libraries: yt-dlp, mutagen, FFmpeg
+* Frontend: HTML, CSS (Tailwind CSS), JavaScript
+* Backend: Python, Flask
+* Additional Libraries: yt-dlp, mutagen, FFmpeg
 
 ## How it works
 The project involves several key steps:
